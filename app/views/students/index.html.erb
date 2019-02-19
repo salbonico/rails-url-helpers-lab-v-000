@@ -1,6 +1,7 @@
 <div>
   <% @students.each do |student| %>
-  
+    <% if @student.active == true %>
+      <p>This student is currently inactive.</p>
     <div><div><%= link_to student.to_s, student_path(student) %></div></div>
   <% end %>
 </div>
